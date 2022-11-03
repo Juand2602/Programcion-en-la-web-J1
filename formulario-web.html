@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>FORMULARIO</title>
+</head>
+
+<body>
+    <h3>Rellena tu CV</h3>
+    <form action="/cv/dataCV" method="post" enctype="multipart/form-data">
+        Nombre <br />
+        <input type="text" name="nombre" value="" size="20" maxlength="30" />
+        <br />
+        Apellidos <br />
+        <input type="text" name="apellidos" value="" size="50" maxlength="80" />
+        <br />
+        Contraseña <br />
+        <input type="password" name="contrasena" value="" maxlength="10" />
+        <br />
+        Confirmar Contraseña <br />
+        <input type="password" name="contrasena" value="" maxlength="10" />
+        <br />
+        Identificación <br />
+        <select name="select">
+            <option value="CC">CC</option>
+            <option value="TI" selected>TI</option>
+            <option value="CE">CE</option>
+        </select>
+        <input type="text" name="idsuj" value="" size="10" maxlength="9" />
+        <br />
+        Sexo <br />
+        <input type="radio" name="sexo" value="hombre" checked="checked" /> Hombre
+        <br />
+        <input type="radio" name="sexo" value="mujer" /> Mujer
+        <br /><br />
+        Incluir mi foto
+        <input type="file" name="foto" />
+        <br /><br />
+        <input type="radio" name="profesion" value="Estudiante"> Estudiante
+    </form>
+
+    <form action="#">
+        <fieldset>
+            <legend>
+                Datos personales
+            </legend>
+            Departamento<br />
+            <select name="select">
+                <option value="departamento">-selecciona-</option>
+            </select>
+            Fecha de nacimiento <br />
+            <input type="number" name="dia" value="">
+
+            de <select name="select">
+                <option value="enero">Enero</option>
+                <option value="febrero">Febrero</option>
+                <option value="marzo">Marzo</option>
+                <option value="abril">Abril</option>
+                <option value="mayo">Mayo</option>
+                <option value="junio">Junio</option>
+                <option value="julio">Julio</option>
+                <option value="agosto">Agosto</option>
+                <option value="Sep">Sep</option>
+                <option value="oct">Oct</option>
+                <option value="nov">Nov</option>
+                <option value="Dic">Dic</option>
+            </select>
+            de <input type="number" name="ano" value="">
+            <br />
+            Temas de intereses:
+            <br />
+            <select name="temas">
+                <optgroup>
+                    <option>Administracion de bases de datos</option>
+                    <option>Analisis y programacion</option>
+                    <option>Arquitectura</option>
+                    <option>Calidad</option>
+                    <option>CRP,CRM,Business Intelligence</option>
+                </optgroup>
+            </select>
+        </fieldset>
+        <button type="button" name="boton" onclick="location.href='lista.html'"> Guardar cambios </button>
+        <input type="submit" value="Borrar los datos introducidos" />
+    </form>
+</body>
+
+</html>
